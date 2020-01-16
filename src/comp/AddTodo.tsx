@@ -7,7 +7,8 @@ export const AddTodo: React.FC = () => {
 
   const onSubmitter = (e: any) => {
     todosApi.create({
-      value: newTodo
+      value: newTodo.toLowerCase(),
+      completed: false
     });
   };
 
