@@ -16,10 +16,11 @@ export const AddTodo: React.FC = () => {
     <div className="AddTodo">
       <form onSubmit={onSubmitter}>
         <input
+          className="AddToDoInput"
           onChange={(e: any) => setNewTodo(e.target.value)}
           placeholder="Enter new Todo"
         />
-        <button>Add Todo</button>
+        <button className="AddToDoBtn">Add Todo</button>
       </form>
     </div>
   );

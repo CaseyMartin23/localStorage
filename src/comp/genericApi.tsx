@@ -12,14 +12,20 @@ export const genericApi = <T extends {}>(name: string) => {
     findBy<K extends keyof T>(key: K, value: T[K]) {
       return Promise.resolve(
         Object.values(db).find(item => {
-          return item[key] === value;
+          if (typeof value == "string") {
+            return (item[key] as any).includes(value);
+          }
+          return item[key] == value;
         })
       );
     },
     filterBy<K extends keyof T>(key: K, value: T[K]) {
       return Promise.resolve(
         Object.values(db).filter(item => {
-          return item[key] === value;
+          if (typeof value == "string") {
+            return (item[key] as any).includes(value);
+          }
+          return item[key] == value;
         })
       );
     },

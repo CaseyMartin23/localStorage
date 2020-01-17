@@ -1,0 +1,23 @@
+h2 {
+  /* margin: 0; */
+}
+
+.Header {
+  padding-top: 5px;
+  text-align: center;
+  background-color: #007876;
+  margin-top: 0;
+  height: 70px;
+  color: white;
+}
+
+.TodoDisplay {
+  padding: 10px;
+}
+
+.Search-Bar {
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 3px;
+}
