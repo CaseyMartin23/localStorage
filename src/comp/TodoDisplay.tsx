@@ -21,10 +21,7 @@ export const TodoDisplay: React.FC = () => {
     <div>
       <input
         onChange={(e: any) => {
-          let userInput = e.target.value
-            .toLowerCase()
-            .replace("**", "")
-            .replace("**", "");
+          let userInput = e.target.value.toLowerCase();
           console.log("Boolean for userInput to list of todos ==> ", userInput);
           todosApi
             .filterBy("value", userInput)
